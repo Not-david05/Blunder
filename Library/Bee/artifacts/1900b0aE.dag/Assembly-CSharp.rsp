@@ -406,6 +406,7 @@
 "Assets/Scripts/Nau.cs"
 "Assets/Scripts/Obstacle.cs"
 "Assets/Scripts/Paret.cs"
+"Assets/Scripts/Proyectile.cs"
 "Assets/Scripts/Resultats.cs"
 "Assets/Scripts/ValorsGlobals.cs"
 -langversion:9.0

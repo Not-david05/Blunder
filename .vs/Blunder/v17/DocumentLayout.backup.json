@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\d.valentin\\Blunder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|c:\\users\\d.valentin\\blunder\\assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\d.valentin\\blunder\\assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|c:\\users\\d.valentin\\blunder\\assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -88,8 +88,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Resultats.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAB8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:58:46.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-06T14:58:46.855Z"
             },
             {
               "$type": "Document",

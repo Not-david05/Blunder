@@ -62,6 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\Proyectile.cs" />
     <Compile Include="Assets\Scripts\Paret.cs" />
     <Compile Include="Assets\Scripts\GeneradorParets.cs" />
     <Compile Include="Assets\Scripts\Nau.cs" />

@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\d.valentin\\Blunder\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|c:\\users\\d.valentin\\blunder\\assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:assets\\3d objects\\awa\\mtlcolorpostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\nau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\nau.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,16 +11,24 @@
       "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\valorsglobals.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\d.valentin\\Blunder\\Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\resultats.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\generadorobstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\generadorobstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\escenainici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\escenainici.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6A521A88-DC70-A3DB-51B0-7B2FB6D5F98B}|Assembly-CSharp.csproj|C:\\Users\\d.valentin\\Blunder\\assets\\scripts\\generadorparets.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
@@ -62,25 +62,23 @@
               "IsPinned": true
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MTLColorPostprocessor.cs",
-              "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
-              "RelativeDocumentMoniker": "Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
-              "ToolTip": "C:\\Users\\d.valentin\\Blunder\\Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
-              "RelativeToolTip": "Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-13T14:46:47.118Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "MTLColorPostprocessor.cs",
+              "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
+              "RelativeDocumentMoniker": "Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
+              "ToolTip": "C:\\Users\\d.valentin\\Blunder\\Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
+              "RelativeToolTip": "Assets\\3d Objects\\Awa\\MTLColorPostprocessor.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-13T14:46:47.118Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Resultats.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\Resultats.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Resultats.cs",
@@ -92,31 +90,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Nau.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\Nau.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Nau.cs",
               "ToolTip": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\Nau.cs",
               "RelativeToolTip": "Assets\\Scripts\\Nau.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAwwF0AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T13:33:07.122Z"
+              "WhenOpened": "2025-04-30T13:33:07.122Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "ValorsGlobals.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\ValorsGlobals.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\ValorsGlobals.cs",
               "ToolTip": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\ValorsGlobals.cs",
               "RelativeToolTip": "Assets\\Scripts\\ValorsGlobals.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-06T14:48:55.138Z"
+              "WhenOpened": "2025-05-06T14:48:55.138Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EscenaInici.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\EscenaInici.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EscenaInici.cs",
@@ -128,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "GeneradorObstacle.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\GeneradorObstacle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GeneradorObstacle.cs",
@@ -140,15 +140,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "Obstacle.cs",
               "DocumentMoniker": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\Obstacle.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Obstacle.cs",
               "ToolTip": "C:\\Users\\d.valentin\\Blunder\\Assets\\Scripts\\Obstacle.cs",
               "RelativeToolTip": "Assets\\Scripts\\Obstacle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T14:54:56.769Z"
+              "WhenOpened": "2025-04-30T14:54:56.769Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

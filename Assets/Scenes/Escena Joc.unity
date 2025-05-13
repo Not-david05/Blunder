@@ -500,6 +500,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obstacle: {fileID: 4970265120525663330, guid: 4173aaf942de62e42b58b6a58c12a5b6, type: 3}
+--- !u!1001 &1792445309
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2019339
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.187966
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.8242035
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_Name
+      value: Rick Soldier of god33
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1151388028547126963, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.36
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 84df23fdef0570a49b6523c69ae03056, type: 3}
 --- !u!1 &1947251601
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +930,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72923cf1fa2ab9846a382aedf41a82af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textEscuts: {fileID: 1266321518}
+  textEscuts: {fileID: 1266321520}
+  projectilePrefab: {fileID: 4199461007691350471, guid: c8cab4955b0bb3b498accfd776f589ad, type: 3}
+  firePoint: {fileID: 1151388027460188402}
+  projectileSpeed: 20
 --- !u!54 &8164078559656733644
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -904,3 +972,4 @@ SceneRoots:
   - {fileID: 1589852546}
   - {fileID: 625163625}
   - {fileID: 2141492831}
+  - {fileID: 1792445309}

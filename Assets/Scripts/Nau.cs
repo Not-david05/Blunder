@@ -1,89 +1,81 @@
-﻿using NUnit.Framework;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Nau : MonoBehaviour
 {
     private float velNau;
-    /*
-     Limit_esquerraA=(-16.X),(6,7.y)
-     Limit_dretA=(16.X),(6,7.y)
-    Limit_esquerraB=(-16.X),(-9.5.y)
-    Limit_dretB=(16.X),(-9.5.y)
-      */
-    
-    private const float Limit_dret = 16f; // Eix x.
-    private const float Limit_esquerra = -16f; // Eix z.
-    private const float Limit_inferior = -9.5f; // Eix y.
-    private const float Limit_superior = 6.7f; // Eix y.
-    private int numEscuts;
-    public GameObject textEscuts;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [Header("Límites de la pantalla")]
+    private const float Limit_dret = 16f;
+    private const float Limit_esquerra = -16f;
+    private const float Limit_inferior = -9.5f;
+    private const float Limit_superior = 6.7f;
+
+    [Header("UI Elements")]
+    public TextMeshProUGUI textEscuts;
+
+    [Header("Disparo")]
+    public GameObject projectilePrefab;
+    public Transform firePoint;
+    public float projectileSpeed = 20f;
+
     void Start()
     {
         velNau = 10f;
-        //numEscuts = 3;
-        ValorsGlobals.numeroEscuts = 3; 
+        ValorsGlobals.numeroEscuts = 3;
+
+        textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
     }
+
     void Update()
     {
         Movimentnau();
         ControlLimitsPantalla();
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
     }
+
     void ControlLimitsPantalla()
     {
-        if (transform.position.z < Limit_esquerra)
-        {
-            transform.position = new Vector3(
-                Limit_esquerra,
-                transform.position.y,
-                transform.position.x
-            );
-        }
-
-        if (transform.position.z > Limit_dret)
-        {
-            transform.position = new Vector3(
-                Limit_dret,
-                transform.position.y,
-                transform.position.x
-            );
-        }
-
-        if (transform.position.y < Limit_inferior)
-        {
-            transform.position = new Vector3(
-                transform.position.x,
-                Limit_inferior,
-                transform.position.z
-            );
-        }
-
-        if (transform.position.y > Limit_superior)
-        {
-            transform.position = new Vector3(
-                transform.position.x,
-                Limit_superior,
-                transform.position.z
-            );
-        }
+        Vector3 pos = transform.position;
+        pos.z = Mathf.Clamp(pos.z, Limit_esquerra, Limit_dret);
+        pos.y = Mathf.Clamp(pos.y, Limit_inferior, Limit_superior);
+        transform.position = pos;
     }
 
     void Movimentnau()
     {
         float movimentHoritzontal = Input.GetAxisRaw("Horizontal");
         float movimentVertical = Input.GetAxisRaw("Vertical");
-        
-        Vector3 vectorDireccio = new Vector3(movimentHoritzontal, movimentVertical,0);
-        vectorDireccio = vectorDireccio.normalized;
-
-        Vector3 nouDesplazament = new Vector3(
-            vectorDireccio.x * velNau * Time.deltaTime,
-            vectorDireccio.y * velNau * Time.deltaTime,
-            0
-            );
+        Vector3 vectorDireccio = new Vector3(movimentHoritzontal, movimentVertical, 0).normalized;
+        Vector3 nouDesplazament = vectorDireccio * velNau * Time.deltaTime;
         transform.position += nouDesplazament;
     }
+
+    void Shoot()
+    {
+        if (projectilePrefab != null && firePoint != null)
+        {
+            GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            Projectile p = proj.GetComponent<Projectile>();
+            if (p != null)
+                p.speed = projectileSpeed;
+        }
+        else
+        {
+            Debug.LogWarning("ProjectilePrefab o FirePoint no asignados en el Inspector.");
+        }
+    }
+
+    public void UpdateShieldUI()
+    {
+        textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Obstacle")
@@ -91,15 +83,13 @@ public class Nau : MonoBehaviour
             if (ValorsGlobals.numeroEscuts > 0)
             {
                 ValorsGlobals.numeroEscuts--;
-                textEscuts.GetComponent<TMPro.TextMeshProUGUI>().text = "Escuts: "+ ValorsGlobals.numeroEscuts.ToString();
+                UpdateShieldUI();
             }
             else
             {
-                
                 Debug.Log("Nau Destruida");
                 SceneManager.LoadScene("Escena resultats");
             }
-               
         }
     }
 }
