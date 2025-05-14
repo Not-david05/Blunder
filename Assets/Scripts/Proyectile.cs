@@ -1,14 +1,17 @@
 using UnityEngine;
 
-
-
 public class Projectile : MonoBehaviour
 {
-    // Velocidad de la bala (en X o Z según tu escena)
     [HideInInspector]
     public float speed = 20f;
 
-    private void Update()
+    void Start()
+    {
+        // Se autodestruye tras 5 segundos
+        Destroy(gameObject, 5f);
+    }
+
+    void Update()
     {
         transform.position += transform.forward * speed * Time.deltaTime;
     }
@@ -17,12 +20,14 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Obstacle"))
         {
-            // Destruye el obstáculo
             Destroy(other.gameObject);
-            // Añade puntos
-            ValorsGlobals.score += 10;
-            
-            // Destruye el proyectil
+
+            // Calculamos bonus por minutos vividos
+            int minutes = Mathf.FloorToInt((Time.time - ValorsGlobals.startTime) / 60f);
+            int extra = minutes * 5;
+            int pointsToAdd = 10 + extra;
+
+            ValorsGlobals.score += pointsToAdd;
             Destroy(gameObject);
         }
     }

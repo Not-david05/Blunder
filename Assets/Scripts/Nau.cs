@@ -1,93 +1,122 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Security.Cryptography;
 
 public class Nau : MonoBehaviour
 {
     private float velNau;
-
-    [Header("Límites de la pantalla")]
+    private float lastRegenTime;
+    private const float REGEN_INTERVAL = 60f;
     private const float Limit_dret = 16f;
     private const float Limit_esquerra = -16f;
     private const float Limit_inferior = -9.5f;
     private const float Limit_superior = 6.7f;
+    private const int MAX_ESCUTS = 3;
 
     [Header("UI Elements")]
     public TextMeshProUGUI textEscuts;
+    public TextMeshProUGUI textTiempo;   // Nuevo campo para tiempo actual
+    public TextMeshProUGUI textScore;    // Nuevo campo para puntuación actual
 
     [Header("Disparo")]
     public GameObject projectilePrefab;
     public Transform firePoint;
-    public float projectileSpeed = 20f;
+    public float projectileSpeed = 190f;
 
     void Start()
     {
-        velNau = 10f;
-        ValorsGlobals.numeroEscuts = 3;
+        velNau = 15f;
+        ValorsGlobals.numeroEscuts = MAX_ESCUTS;
+        ValorsGlobals.score = 0;
+        ValorsGlobals.startTime = Time.time;
+        lastRegenTime = Time.time;
 
         textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
+        textTiempo.text = "Tiempo: 00:00";
+        textScore.text = "Puntuación: 0";
     }
 
     void Update()
     {
         Movimentnau();
         ControlLimitsPantalla();
+        RegenerateShield();
+        UpdateUI();
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Shoot();
-        }
+        if (Input.GetKeyDown(KeyCode.Space)) Shoot();
     }
 
-    void ControlLimitsPantalla()
+    void UpdateUI()
     {
-        Vector3 pos = transform.position;
-        pos.z = Mathf.Clamp(pos.z, Limit_esquerra, Limit_dret);
-        pos.y = Mathf.Clamp(pos.y, Limit_inferior, Limit_superior);
-        transform.position = pos;
+        // Tiempo vivido actual
+        float t = Time.time - ValorsGlobals.startTime;
+        int minutes = Mathf.FloorToInt(t / 60f);
+        int seconds = Mathf.FloorToInt(t % 60f);
+        textTiempo.text = string.Format("Tiempo: {0:00}:{1:00}", minutes, seconds);
+
+        // Puntuación actual
+        textScore.text = "Puntuación: " + ValorsGlobals.score;
+    }
+
+    void RegenerateShield()
+    {
+        if (Time.time - lastRegenTime >= REGEN_INTERVAL)
+        {
+            if (ValorsGlobals.numeroEscuts < MAX_ESCUTS)
+            {
+                ValorsGlobals.numeroEscuts++;
+                textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
+            }
+            lastRegenTime += REGEN_INTERVAL;
+        }
     }
 
     void Movimentnau()
     {
-        float movimentHoritzontal = Input.GetAxisRaw("Horizontal");
-        float movimentVertical = Input.GetAxisRaw("Vertical");
-        Vector3 vectorDireccio = new Vector3(movimentHoritzontal, movimentVertical, 0).normalized;
-        Vector3 nouDesplazament = vectorDireccio * velNau * Time.deltaTime;
-        transform.position += nouDesplazament;
+        float h = Input.GetAxisRaw("Horizontal");
+        float v = Input.GetAxisRaw("Vertical");
+        Vector3 dir = new Vector3(h, v, 0).normalized;
+        transform.position += dir * velNau * Time.deltaTime;
+    }
+
+    void ControlLimitsPantalla()
+    {
+        // Limitar movimiento en X (horizontal) y Y (vertical)
+        Vector3 pos = transform.position;
+        pos.x = Mathf.Clamp(pos.x, Limit_esquerra, Limit_dret);
+        pos.y = Mathf.Clamp(pos.y, Limit_inferior, Limit_superior);
+        transform.position = pos;
     }
 
     void Shoot()
     {
         if (projectilePrefab != null && firePoint != null)
         {
-            GameObject proj = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
+            GameObject proj = Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
             Projectile p = proj.GetComponent<Projectile>();
-            if (p != null)
-                p.speed = projectileSpeed;
+            if (p != null) p.speed = projectileSpeed;
         }
-        else
-        {
-            Debug.LogWarning("ProjectilePrefab o FirePoint no asignados en el Inspector.");
-        }
-    }
-
-    public void UpdateShieldUI()
-    {
-        textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
+        else Debug.LogWarning("ProjectilePrefab o FirePoint no asignados.");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Obstacle")
+        if (other.CompareTag("Obstacle"))
         {
             if (ValorsGlobals.numeroEscuts > 0)
             {
                 ValorsGlobals.numeroEscuts--;
-                UpdateShieldUI();
+                textEscuts.text = "Escuts: " + ValorsGlobals.numeroEscuts;
             }
             else
             {
-                Debug.Log("Nau Destruida");
+                ValorsGlobals.timeAlive = Time.time - ValorsGlobals.startTime;
+                ValorsGlobals.highScores.Add(new HighScoreEntry(ValorsGlobals.playerName, ValorsGlobals.score));
+                ValorsGlobals.highScores.Sort((a, b) => b.score.CompareTo(a.score));
+                if (ValorsGlobals.highScores.Count > 4)
+                    ValorsGlobals.highScores.RemoveRange(4, ValorsGlobals.highScores.Count - 4);
+
                 SceneManager.LoadScene("Escena resultats");
             }
         }

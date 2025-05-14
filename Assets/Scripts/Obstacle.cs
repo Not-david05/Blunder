@@ -2,32 +2,22 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-
-    private float vel;          // Velocidad en Z
-    private const float Limit_Z = -10f;  // Límite en Z (ajusta al valor que necesites)
-
-    void Start()
-    {
-        vel = -15f;  // negativo para “hacia atrás” (eje Z negativo)
-    }
+    private const float Limit_Z = -10f;
+    private float baseSpeed = -15f;
+    private float increaseRate = 0.02f; // incremento por segundo
 
     void Update()
     {
-        // Desplazamos sólo en Z:
-        float desplazamientoZ = vel * Time.deltaTime;
-        transform.position += new Vector3(0f, 0f, desplazamientoZ);
+        // Aumenta velocidad con el tiempo de juego
+        float t = Time.time - ValorsGlobals.startTime;
+        float vel = baseSpeed * (1f + increaseRate * t);
 
-        // Si cruza el límite en Z, destruimos el objeto
-        if (transform.position.z < Limit_Z)
-        {
-            Destroy(gameObject);
-        }
+        transform.position += new Vector3(0f, 0f, vel * Time.deltaTime);
+        if (transform.position.z < Limit_Z) Destroy(gameObject);
     }
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Nau")
-        {
-            Destroy(gameObject);
-        }
+        if (other.CompareTag("Nau")) Destroy(gameObject);
     }
 }

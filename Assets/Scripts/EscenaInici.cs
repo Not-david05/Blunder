@@ -1,31 +1,25 @@
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class EscenaInicii : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public TMP_InputField inputPlayerName;  // Campo de texto para nombre
+
+    public void ObrirEscenaJugar()
     {
-        
+        // Guardar nombre antes de cargar escena
+        ValorsGlobals.playerName = inputPlayerName.text;
+        SceneManager.LoadScene("Escena Joc");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public static void ObrirEscenaJugar()
-    {
-        SceneManager.LoadScene("Escena Joc"); 
-    }
-    public static void SortirAplicacio()
+    public void SortirAplicacio()
     {
 #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
-
     }
 }
