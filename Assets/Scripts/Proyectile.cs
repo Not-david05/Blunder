@@ -13,8 +13,9 @@ public class Projectile : MonoBehaviour
 
     void Update()
     {
-        transform.position += transform.forward * speed * Time.deltaTime;
+        transform.position += transform.right * speed * Time.deltaTime;
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
